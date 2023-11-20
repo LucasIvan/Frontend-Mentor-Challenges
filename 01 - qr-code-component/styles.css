@@ -1,54 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-*{
+
+:root {
+    --main-color: #1F3251;
+    --secondary-color: #D6E2F0;
+    --tertiary-color: #7B879D;
+}
+
+* {
     margin: 0;
     font-family: 'Outfit', sans-serif;
-    font-size: 15px;
 }
 
-body{
-    background-color: hsl(212, 45%, 89%);
+body {
+    background-color: var(--secondary-color);
 }
 
-.container{
+.container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 99vh;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 28px;
 }
 
-.QR-code-card{
-    width: 320px;
-    box-sizing: border-box;
-    padding: 1em;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 1em;
+.QR-code-card {
+    width: 315px;
+    height: 484px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+    background-color: #FFF;
+    border-radius: 15px;
 }
 
-.qr-code{
-    width: 100%;
-    border-radius: 1em;
+.qr-code {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
 }
 
-.container p:first-of-type{
-    font-size: 20px;
-    font-weight: bold;
-    color: hsl(218, 44%, 22%);
-}
-
-p{
+.container p:first-of-type {
+    color: var(--main-color);
     text-align: center;
-    margin: 15px 0;
-    color: hsl(220, 15%, 55%);
+    font-size: 22px;
+    font-weight: 600;
+    width: 254px;
 }
 
-@media (max-width: 375px) {
-    .QR-code-card{
-        max-width: 75%;
-    }
-    .attribution{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+p {
+    width: 243px;
+    color: var(--tertiary-color);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.attribution {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+@media (max-width: 360px) {
+    .container {
+        gap: 8px;
     }
 }
